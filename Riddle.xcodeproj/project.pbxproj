@@ -14,6 +14,13 @@
 		1360B3C32057400C0006002E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1360B3C12057400C0006002E /* LaunchScreen.storyboard */; };
 		1360B3C62057400C0006002E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1360B3C52057400C0006002E /* main.m */; };
 		1360B3D02057400C0006002E /* RiddleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1360B3CF2057400C0006002E /* RiddleTests.m */; };
+		36CB0E5146365ED0F19CA6A9 /* libPods-RiddleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D7B69010EF4A856CFA2538 /* libPods-RiddleTests.a */; };
+		466779B220576E640050852F /* button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 466779AE20576E630050852F /* button.mp3 */; };
+		466779B320576E640050852F /* roll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 466779AF20576E640050852F /* roll.mp3 */; };
+		466779B420576E640050852F /* diceClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 466779B020576E640050852F /* diceClick.mp3 */; };
+		466779B520576E640050852F /* shake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 466779B120576E640050852F /* shake.mp3 */; };
+		468DE77C2057AEF8008AC8AB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468DE77B2057AEF8008AC8AB /* AudioToolbox.framework */; };
+		7E9A28C02E7190DA1652B44A /* libPods-Riddle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8FE0A052CCA13E6FBFED70 /* libPods-Riddle.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +47,17 @@
 		1360B3CB2057400C0006002E /* RiddleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiddleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1360B3CF2057400C0006002E /* RiddleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiddleTests.m; sourceTree = "<group>"; };
 		1360B3D12057400C0006002E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E2457F62015DA412CE90A87 /* Pods-Riddle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Riddle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Riddle/Pods-Riddle.debug.xcconfig"; sourceTree = "<group>"; };
+		466779AE20576E630050852F /* button.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button.mp3; sourceTree = "<group>"; };
+		466779AF20576E640050852F /* roll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = roll.mp3; sourceTree = "<group>"; };
+		466779B020576E640050852F /* diceClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = diceClick.mp3; sourceTree = "<group>"; };
+		466779B120576E640050852F /* shake.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake.mp3; sourceTree = "<group>"; };
+		468DE77B2057AEF8008AC8AB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		823EB8CD1A8D57DE8D995FBD /* Pods-RiddleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiddleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiddleTests/Pods-RiddleTests.release.xcconfig"; sourceTree = "<group>"; };
+		C124D2EC5428798D47215039 /* Pods-Riddle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Riddle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Riddle/Pods-Riddle.release.xcconfig"; sourceTree = "<group>"; };
+		CD8FE0A052CCA13E6FBFED70 /* libPods-Riddle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Riddle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4D7B69010EF4A856CFA2538 /* libPods-RiddleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RiddleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6F39C635EABDF31DE7FAE0B /* Pods-RiddleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiddleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RiddleTests/Pods-RiddleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468DE77C2057AEF8008AC8AB /* AudioToolbox.framework in Frameworks */,
+				7E9A28C02E7190DA1652B44A /* libPods-Riddle.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +74,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CB0E5146365ED0F19CA6A9 /* libPods-RiddleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06A1DE193DF35A525A30FBF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E2457F62015DA412CE90A87 /* Pods-Riddle.debug.xcconfig */,
+				C124D2EC5428798D47215039 /* Pods-Riddle.release.xcconfig */,
+				F6F39C635EABDF31DE7FAE0B /* Pods-RiddleTests.debug.xcconfig */,
+				823EB8CD1A8D57DE8D995FBD /* Pods-RiddleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0774A61002A6067DB1B9C132 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				468DE77B2057AEF8008AC8AB /* AudioToolbox.framework */,
+				CD8FE0A052CCA13E6FBFED70 /* libPods-Riddle.a */,
+				F4D7B69010EF4A856CFA2538 /* libPods-RiddleTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1360B3AA2057400C0006002E = {
 			isa = PBXGroup;
 			children = (
 				1360B3B52057400C0006002E /* Riddle */,
 				1360B3CE2057400C0006002E /* RiddleTests */,
 				1360B3B42057400C0006002E /* Products */,
+				06A1DE193DF35A525A30FBF1 /* Pods */,
+				0774A61002A6067DB1B9C132 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,15 +125,8 @@
 		1360B3B52057400C0006002E /* Riddle */ = {
 			isa = PBXGroup;
 			children = (
-				1360B3B62057400C0006002E /* AppDelegate.h */,
-				1360B3B72057400C0006002E /* AppDelegate.m */,
-				1360B3B92057400C0006002E /* ViewController.h */,
-				1360B3BA2057400C0006002E /* ViewController.m */,
-				1360B3BC2057400C0006002E /* Main.storyboard */,
-				1360B3BF2057400C0006002E /* Assets.xcassets */,
-				1360B3C12057400C0006002E /* LaunchScreen.storyboard */,
-				1360B3C42057400C0006002E /* Info.plist */,
-				1360B3C52057400C0006002E /* main.m */,
+				466779B720576EE20050852F /* Supporting Files */,
+				466779AB20576E1E0050852F /* Other */,
 			);
 			path = Riddle;
 			sourceTree = "<group>";
@@ -103,6 +140,41 @@
 			path = RiddleTests;
 			sourceTree = "<group>";
 		};
+		466779AB20576E1E0050852F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				466779AD20576E4D0050852F /* Resource */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		466779AD20576E4D0050852F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				466779AE20576E630050852F /* button.mp3 */,
+				466779B020576E640050852F /* diceClick.mp3 */,
+				466779AF20576E640050852F /* roll.mp3 */,
+				466779B120576E640050852F /* shake.mp3 */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		466779B720576EE20050852F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1360B3B62057400C0006002E /* AppDelegate.h */,
+				1360B3B72057400C0006002E /* AppDelegate.m */,
+				1360B3B92057400C0006002E /* ViewController.h */,
+				1360B3BA2057400C0006002E /* ViewController.m */,
+				1360B3BC2057400C0006002E /* Main.storyboard */,
+				1360B3BF2057400C0006002E /* Assets.xcassets */,
+				1360B3C12057400C0006002E /* LaunchScreen.storyboard */,
+				1360B3C42057400C0006002E /* Info.plist */,
+				1360B3C52057400C0006002E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1360B3D42057400C0006002E /* Build configuration list for PBXNativeTarget "Riddle" */;
 			buildPhases = (
+				A17AD0D3B456619390E84BE5 /* [CP] Check Pods Manifest.lock */,
 				1360B3AF2057400C0006002E /* Sources */,
 				1360B3B02057400C0006002E /* Frameworks */,
 				1360B3B12057400C0006002E /* Resources */,
+				DA6DE8E7F50EBF1552C165E0 /* [CP] Embed Pods Frameworks */,
+				0A1A5EB06D2273B997C651AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1360B3D72057400C0006002E /* Build configuration list for PBXNativeTarget "RiddleTests" */;
 			buildPhases = (
+				D2AD9128EF212A5C74F577D0 /* [CP] Check Pods Manifest.lock */,
 				1360B3C72057400C0006002E /* Sources */,
 				1360B3C82057400C0006002E /* Frameworks */,
 				1360B3C92057400C0006002E /* Resources */,
+				543586846854F2C63A54CC6C /* [CP] Embed Pods Frameworks */,
+				A2B3E581E4A2FC581B4CA32D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,6 +263,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				466779B520576E640050852F /* shake.mp3 in Resources */,
+				466779B420576E640050852F /* diceClick.mp3 in Resources */,
+				466779B220576E640050852F /* button.mp3 in Resources */,
+				466779B320576E640050852F /* roll.mp3 in Resources */,
 				1360B3C32057400C0006002E /* LaunchScreen.storyboard in Resources */,
 				1360B3C02057400C0006002E /* Assets.xcassets in Resources */,
 				1360B3BE2057400C0006002E /* Main.storyboard in Resources */,
@@ -199,6 +281,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A1A5EB06D2273B997C651AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Riddle/Pods-Riddle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		543586846854F2C63A54CC6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RiddleTests/Pods-RiddleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A17AD0D3B456619390E84BE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A2B3E581E4A2FC581B4CA32D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RiddleTests/Pods-RiddleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2AD9128EF212A5C74F577D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA6DE8E7F50EBF1552C165E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Riddle/Pods-Riddle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1360B3AF2057400C0006002E /* Sources */ = {
@@ -355,10 +530,13 @@
 		};
 		1360B3D52057400C0006002E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E2457F62015DA412CE90A87 /* Pods-Riddle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MXZMK9FZ55;
 				INFOPLIST_FILE = Riddle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhph.user.Riddle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -368,10 +546,13 @@
 		};
 		1360B3D62057400C0006002E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C124D2EC5428798D47215039 /* Pods-Riddle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MXZMK9FZ55;
 				INFOPLIST_FILE = Riddle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhph.user.Riddle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -381,6 +562,7 @@
 		};
 		1360B3D82057400C0006002E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6F39C635EABDF31DE7FAE0B /* Pods-RiddleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -395,6 +577,7 @@
 		};
 		1360B3D92057400C0006002E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 823EB8CD1A8D57DE8D995FBD /* Pods-RiddleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
