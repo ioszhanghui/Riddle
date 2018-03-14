@@ -39,6 +39,10 @@
     self.BgView.userInteractionEnabled = YES;
     [self.closeBtn removeFromSuperview];
     [self.BgView addSubview:self.closeBtn];
+    [self.closeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.BgView).mas_equalTo(-2);
+    }];
+    
     [self.closeBtn addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchDown];
     [self.closeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.BgView).offset(-10);
@@ -46,14 +50,18 @@
     }];
     
     self.soundBtn=  [self createWithLabelName:@"音效" Frame:CGRectMake(0, 58, self.width, 60) BtnTag:1001];
+    self.soundBtn.selected = [[DataHelper getDataForKey:Sound]isEqualToString:@"0"]? NO:YES;
     self.yaoBtn = [self createWithLabelName:@"摇一摇" Frame:CGRectMake(0, 120, self.width, 60) BtnTag:1002];
+    self.yaoBtn.selected = [[DataHelper getDataForKey:Shake]isEqualToString:@"0"]? NO:YES;
     
     self.zoneBtn = [self createBtnWithSupview:self.BgView NormalImg:@"QQZone" SelectImg:@"QQZone" Tag:1003];
     [self.zoneBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.BgView).mas_equalTo(73);
         make.bottom.equalTo(self.BgView).offset(-82);
     }];
-     self.shareBtn = [self createBtnWithSupview:self.BgView NormalImg:@"QQZone" SelectImg:@"QQZone" Tag:1003];
+     self.shareBtn = [self createBtnWithSupview:self.BgView NormalImg:@"shareIcon" SelectImg:@"shareIcon" Tag:1003];
+    
+    self.shareBtn.backgroundColor=[UIColor colorWithRed:107/255.0 green:53/255.0 blue:27/255.0 alpha:1.0];
     [self.shareBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.BgView).offset(-73);
         make.bottom.equalTo(self.BgView).offset(-82);
@@ -85,7 +93,6 @@
         make.width.mas_equalTo(100);
         make.height.mas_equalTo(28);
     }];
-   
     
     UIButton * btn = [self createBtnWithSupview:View NormalImg:@"NOGou" SelectImg:@"haveGou" Tag:tag];
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -101,7 +108,7 @@
     UIButton * btn =[UIButton buttonWithType:UIButtonTypeCustom];
     [View addSubview:btn];
     [btn setImage:[UIImage imageNamed:normal] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:selectImg] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:selectImg] forState:UIControlStateSelected];
     [btn addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchDown];
     btn.tag = tag;
     [btn.imageView sizeToFit];
@@ -116,12 +123,14 @@
         case 1001:{
             //音效
             self.soundBtn.selected = !self.soundBtn.selected;
+            [DataHelper saveData:Sound Value:[@(self.soundBtn.selected) stringValue]];
             
             break;
         }
         case 1002:{
             //摇一摇
             self.yaoBtn.selected = !self.yaoBtn.selected;
+              [DataHelper saveData:Shake Value:[@(self.yaoBtn.selected) stringValue]];
             
             break;
         }

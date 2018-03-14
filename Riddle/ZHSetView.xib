@@ -22,17 +22,17 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH2-1a-u51">
-                    <rect key="frame" x="323" y="85" width="37" height="38"/>
+                    <rect key="frame" x="333" y="82" width="37" height="38"/>
                     <state key="normal" image="close"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.66598886986301364" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="SH2-1a-u51" firstAttribute="top" secondItem="kkn-ut-XKX" secondAttribute="top" constant="85" id="4d0-KI-Awu"/>
+                <constraint firstItem="SH2-1a-u51" firstAttribute="top" secondItem="kkn-ut-XKX" secondAttribute="top" constant="82" id="4d0-KI-Awu"/>
                 <constraint firstItem="xG9-V3-d9w" firstAttribute="top" secondItem="kkn-ut-XKX" secondAttribute="top" constant="90" id="cd9-UL-L39"/>
                 <constraint firstItem="xG9-V3-d9w" firstAttribute="leading" secondItem="kkn-ut-XKX" secondAttribute="leading" constant="22" id="lt0-mc-iaI"/>
                 <constraint firstAttribute="trailing" secondItem="xG9-V3-d9w" secondAttribute="trailing" constant="22" id="qWX-FC-Qpf"/>
-                <constraint firstAttribute="trailing" secondItem="SH2-1a-u51" secondAttribute="trailing" constant="15" id="sJL-Ep-Xn9"/>
+                <constraint firstAttribute="trailing" secondItem="SH2-1a-u51" secondAttribute="trailing" constant="5" id="sJL-Ep-Xn9"/>
             </constraints>
             <connections>
                 <outlet property="BgView" destination="xG9-V3-d9w" id="3YK-hd-ddL"/>

@@ -10,6 +10,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "YYKit.h"
 #import "ZHSetView.h"
+#import "DataHelper.h"
 
 @interface ViewController ()<CAAnimationDelegate>
 
@@ -163,6 +164,9 @@ static NSInteger numCount =5;
 #pragma mark 播放短频音效
 -(void)playSoundFile:(NSString*)fileName{
     
+    if ([[DataHelper getDataForKey:Sound]isEqualToString:@"0"]) {
+        return;
+    }
     // 声明要保存音效文件的变量
     SystemSoundID soundID;
     
@@ -185,7 +189,7 @@ static NSInteger numCount =5;
     
     CGFloat imageWidth = 60;//图片宽度
     //最小x
-    CGFloat minX = imageWidth+ kmargin;
+    CGFloat minX = imageWidth/2+ kmargin;
     //最大X
     CGFloat maxX = width- imageWidth-kmargin;
     //最小y
@@ -224,6 +228,10 @@ static NSInteger numCount =5;
 
 #pragma mark 摇一摇
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    
+    if ([[DataHelper getDataForKey:Shake]isEqualToString:@"0"]) {
+        return;
+    }
     //开始摇一摇调用 点击方法
     [self shakeAction:nil];
 }

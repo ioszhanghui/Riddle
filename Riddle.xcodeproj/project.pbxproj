@@ -22,6 +22,7 @@
 		466779B420576E640050852F /* diceClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 466779B020576E640050852F /* diceClick.mp3 */; };
 		466779B520576E640050852F /* shake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 466779B120576E640050852F /* shake.mp3 */; };
 		468DE77C2057AEF8008AC8AB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468DE77B2057AEF8008AC8AB /* AudioToolbox.framework */; };
+		46D172762058D40E0063183D /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D172752058D40E0063183D /* DataHelper.m */; };
 		7E9A28C02E7190DA1652B44A /* libPods-Riddle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8FE0A052CCA13E6FBFED70 /* libPods-Riddle.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		466779B020576E640050852F /* diceClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = diceClick.mp3; sourceTree = "<group>"; };
 		466779B120576E640050852F /* shake.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake.mp3; sourceTree = "<group>"; };
 		468DE77B2057AEF8008AC8AB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		46D172742058D40E0063183D /* DataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataHelper.h; sourceTree = "<group>"; };
+		46D172752058D40E0063183D /* DataHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataHelper.m; sourceTree = "<group>"; };
 		823EB8CD1A8D57DE8D995FBD /* Pods-RiddleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiddleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RiddleTests/Pods-RiddleTests.release.xcconfig"; sourceTree = "<group>"; };
 		C124D2EC5428798D47215039 /* Pods-Riddle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Riddle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Riddle/Pods-Riddle.release.xcconfig"; sourceTree = "<group>"; };
 		CD8FE0A052CCA13E6FBFED70 /* libPods-Riddle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Riddle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +151,7 @@
 		466779AB20576E1E0050852F /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				46D172732058D3E90063183D /* Tools */,
 				466779AD20576E4D0050852F /* Resource */,
 			);
 			path = Other;
@@ -181,6 +185,15 @@
 				1360B3C52057400C0006002E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46D172732058D3E90063183D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				46D172742058D40E0063183D /* DataHelper.h */,
+				46D172752058D40E0063183D /* DataHelper.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D172762058D40E0063183D /* DataHelper.m in Sources */,
 				1360B3BB2057400C0006002E /* ViewController.m in Sources */,
 				1360B3C62057400C0006002E /* main.m in Sources */,
 				1360B3B82057400C0006002E /* AppDelegate.m in Sources */,
