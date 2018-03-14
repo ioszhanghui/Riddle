@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "YYKit.h"
+#import "ZHSetView.h"
 
 @interface ViewController ()<CAAnimationDelegate>
 
@@ -48,6 +49,11 @@ static NSInteger numCount =5;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // 设置允许摇一摇功能
+    [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
+    // 并让自己成为第一响应者
+    [self becomeFirstResponder]; 
  
 }
 
@@ -58,6 +64,11 @@ static NSInteger numCount =5;
 }
 
 - (IBAction)setBtnAction:(id)sender {
+    
+    [[ZHSetView loadView]showInWindow:^(NSInteger index) {
+        
+    }];;
+    
 }
 - (IBAction)reduceBtnAction:(id)sender {
     
@@ -67,7 +78,6 @@ static NSInteger numCount =5;
     }
     numCount--;
     [self resetLabelContent];
-    NSLog(@"%ld",numCount);
 }
 #pragma mark 修改文字的内容
 -(void)resetLabelContent{
@@ -79,7 +89,6 @@ static NSInteger numCount =5;
         return;
     }
     numCount++;
-    NSLog(@"%ld",numCount);
     [self resetLabelContent];
 }
 - (IBAction)shakeAction:(id)sender {
@@ -116,16 +125,13 @@ static NSInteger numCount =5;
         layer.backgroundColor = [UIColor clearColor].CGColor;
         layer.bounds=CGRectMake(0, 0, 60, 60);
         layer.anchorPoint=CGPointZero;
-        
-        NSString * imageName  = [NSString stringWithFormat:@"SZ_%02d",(arc4random()%5+1)];
-        NSLog(@"imageName***%@",imageName);
+        NSString * imageName  = [NSString stringWithFormat:@"SZ_%02d",(arc4random()%6+1)];
         layer.contents = (__bridge id)[UIImage imageNamed:imageName].CGImage;
         layer.position=CGPointMake(-60, -60);
         [self.BGView.layer addSublayer:layer];
         
         CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"position"];
         animation.fromValue=[NSValue valueWithCGPoint:CGPointMake(self.layer.center.x, self.layer.center.y)];
-        NSLog(@"CGPoint***%@",NSStringFromCGPoint([self setSaiziScrollPoint]));
         animation.toValue=[NSValue valueWithCGPoint:[self setSaiziScrollPoint]];
         
         CABasicAnimation * ani =[CABasicAnimation animation];
@@ -191,6 +197,7 @@ static NSInteger numCount =5;
     while([self isRepeatData:point]){
        point = CGPointMake([self getRandomNumber:minX to:maxX], [self getRandomNumber:minY to:maxY]);
     }
+    
     [self.points addObject:NSStringFromCGPoint(point)];
     
     return point;
@@ -201,10 +208,8 @@ static NSInteger numCount =5;
     
     BOOL isRepeat = NO;
     for (NSInteger i=0; i<self.points.count; i++) {
-        
         CGPoint point1 = CGPointFromString([self.points  objectAtIndex:i]);
-        NSLog(@"%d~~~~~~%d",abs(((int)point.x -(int)point1.x)),(abs((int)point.y - (int)point1.y)));
-        if ((abs(((int)point.x -(int)point1.x)))<70||(abs((int)point.y - (int)point1.y))<70) {
+        if ((abs(((int)point.x -(int)point1.x)))<70&&(abs((int)point.y - (int)point1.y))<70) {
             isRepeat = YES;
             break;
         }
@@ -215,6 +220,16 @@ static NSInteger numCount =5;
 #pragma mark获取随机数
 -(float)getRandomNumber:(int)from to:(int)to{
     return from + arc4random()%(to-from);
+}
+
+#pragma mark 摇一摇
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    //开始摇一摇调用 点击方法
+    [self shakeAction:nil];
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    
 }
 
 

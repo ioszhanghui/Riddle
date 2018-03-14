@@ -14,6 +14,8 @@
 		1360B3C32057400C0006002E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1360B3C12057400C0006002E /* LaunchScreen.storyboard */; };
 		1360B3C62057400C0006002E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1360B3C52057400C0006002E /* main.m */; };
 		1360B3D02057400C0006002E /* RiddleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1360B3CF2057400C0006002E /* RiddleTests.m */; };
+		1361BCAF20580819006FCDA4 /* ZHSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1361BCAE20580819006FCDA4 /* ZHSetView.m */; };
+		1361BCB120580832006FCDA4 /* ZHSetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1361BCB020580832006FCDA4 /* ZHSetView.xib */; };
 		36CB0E5146365ED0F19CA6A9 /* libPods-RiddleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D7B69010EF4A856CFA2538 /* libPods-RiddleTests.a */; };
 		466779B220576E640050852F /* button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 466779AE20576E630050852F /* button.mp3 */; };
 		466779B320576E640050852F /* roll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 466779AF20576E640050852F /* roll.mp3 */; };
@@ -47,6 +49,9 @@
 		1360B3CB2057400C0006002E /* RiddleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiddleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1360B3CF2057400C0006002E /* RiddleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiddleTests.m; sourceTree = "<group>"; };
 		1360B3D12057400C0006002E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1361BCAD20580819006FCDA4 /* ZHSetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHSetView.h; sourceTree = "<group>"; };
+		1361BCAE20580819006FCDA4 /* ZHSetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHSetView.m; sourceTree = "<group>"; };
+		1361BCB020580832006FCDA4 /* ZHSetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZHSetView.xib; sourceTree = "<group>"; };
 		1E2457F62015DA412CE90A87 /* Pods-Riddle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Riddle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Riddle/Pods-Riddle.debug.xcconfig"; sourceTree = "<group>"; };
 		466779AE20576E630050852F /* button.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button.mp3; sourceTree = "<group>"; };
 		466779AF20576E640050852F /* roll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = roll.mp3; sourceTree = "<group>"; };
@@ -166,6 +171,9 @@
 				1360B3B72057400C0006002E /* AppDelegate.m */,
 				1360B3B92057400C0006002E /* ViewController.h */,
 				1360B3BA2057400C0006002E /* ViewController.m */,
+				1361BCAD20580819006FCDA4 /* ZHSetView.h */,
+				1361BCAE20580819006FCDA4 /* ZHSetView.m */,
+				1361BCB020580832006FCDA4 /* ZHSetView.xib */,
 				1360B3BC2057400C0006002E /* Main.storyboard */,
 				1360B3BF2057400C0006002E /* Assets.xcassets */,
 				1360B3C12057400C0006002E /* LaunchScreen.storyboard */,
@@ -270,6 +278,7 @@
 				1360B3C32057400C0006002E /* LaunchScreen.storyboard in Resources */,
 				1360B3C02057400C0006002E /* Assets.xcassets in Resources */,
 				1360B3BE2057400C0006002E /* Main.storyboard in Resources */,
+				1361BCB120580832006FCDA4 /* ZHSetView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,13 +328,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Riddle-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A2B3E581E4A2FC581B4CA32D /* [CP] Copy Pods Resources */ = {
@@ -349,13 +361,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RiddleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DA6DE8E7F50EBF1552C165E0 /* [CP] Embed Pods Frameworks */ = {
@@ -383,6 +398,7 @@
 				1360B3BB2057400C0006002E /* ViewController.m in Sources */,
 				1360B3C62057400C0006002E /* main.m in Sources */,
 				1360B3B82057400C0006002E /* AppDelegate.m in Sources */,
+				1361BCAF20580819006FCDA4 /* ZHSetView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MXZMK9FZ55;
+				DEVELOPMENT_TEAM = JJKQ5L53DX;
 				INFOPLIST_FILE = Riddle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -550,7 +566,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MXZMK9FZ55;
+				DEVELOPMENT_TEAM = JJKQ5L53DX;
 				INFOPLIST_FILE = Riddle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
